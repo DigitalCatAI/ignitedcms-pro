@@ -222,7 +222,7 @@
 		        		<!-- end -->
 		        		<div id="app">
 
-                            <input type="text" name="matrixName" id="" v-model="JSON.stringify(todos)" />
+                            <!-- <input type="text" name="matrixName" id="" v-model="JSON.stringify(todos)" /> -->
 
 		        		{{todos}}
 

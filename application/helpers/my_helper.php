@@ -859,8 +859,8 @@ if ( ! function_exists('my_field_show'))
           $tmp_name = $row->name;
           echo("<div @click='goNow($fieldid)'  class='btn btn-white btn-s-xs m-t'> <i class='fa fa-plus'></i><strong> $row->name</strong></div>");
           
-          
-          // echo("<input type='text' name='$row->name' id='$row->name' value='' />");
+            
+           echo("<input type='text' name='$row->name' id='$row->name' v-model='JSON.stringify(todos)' />");
           
 
 

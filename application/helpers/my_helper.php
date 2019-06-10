@@ -860,16 +860,7 @@ if ( ! function_exists('my_field_show'))
           echo("<div @click='goNow($fieldid)'  class='btn btn-white btn-s-xs m-t'> <i class='fa fa-plus'></i><strong> $row->name</strong></div>");
           
           
-          echo br();
-          $arr = json_decode($row->opts,true) ;
-
-          // print_r( $arr[1]);
-
-          foreach ($arr as $key => $value) {
-            //echo $value['type'];
-          }
-
-           //$content = my_field_content($entryid,$row->name);
+          // echo("<input type='text' name='$row->name' id='$row->name' value='' />");
           
 
 

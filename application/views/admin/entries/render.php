@@ -248,7 +248,7 @@
 			                    <div v-if="todo[x-1].type=='multi-line'">
 			                    	<div class="form-group">
 			                    	    <label>{{todo[x-1].title}}</label>
-			                    	    <textarea v-model="todo[x-1].value"  class="form-control" rows="5" data-maxlength="this" data-required="true" placeholder="Type here" data-toggle="tooltip" data-placement="top" title="hovertext"></textarea>
+			                    	    <textarea v-model="todo[x-1].value"  class="form-control" rows="5"  data-required="true" placeholder="Type here" data-toggle="tooltip" data-placement="top" title=""></textarea>
 			                    	
 			                    	</div>
 

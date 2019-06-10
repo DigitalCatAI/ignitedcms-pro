@@ -54,15 +54,14 @@ class Entries extends CI_Controller {
 
       
        //https://www.w3schools.com/php/showphp.asp?filename=demo_func_sizeof2
-       
-        echo count($array,2); //level 2
-        echo br();
+       //https://stackoverflow.com/questions/32961591/php-multidimensional-array-length
+      
 
 
         $tmp_array = array();
 
         for ($i=0; $i < sizeof($array) ; $i++) { 
-            for ($j=0; $j < sizeof($array,2) ; $j++) { 
+            for ($j=0; $j < count(reset($array)) ; $j++) { 
 
                 $x =  $array[$i][$j]["value"];
                 $y =  $array[$i][$j]["title"];
@@ -79,7 +78,7 @@ class Entries extends CI_Controller {
 
 
         echo "<pre>";
-        print_r($tmp_array);
+       // print_r($tmp_array);
         echo "</pre>";
 
 

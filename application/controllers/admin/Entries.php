@@ -23,6 +23,55 @@ class Entries extends CI_Controller {
 		  }
 	}
 
+     /**
+      *  @Description: quick and dirty print test please remove after testing
+      *       @Params: params
+      *
+      *       @returns: returns
+      */
+     public function print_test()
+     {
+        $this->db->select('*');
+        $this->db->from('content');
+        $this->db->where('id', '204');
+
+        $query = $this->db->get();
+
+        $a = "";
+        
+        foreach ($query->result() as $row) 
+        {
+            $a =  $row->matrixName;
+        }
+
+
+
+        $array = json_decode($a,true);
+
+        echo "<pre>";
+        print_r($array);
+        echo "</pre>";
+
+      
+       
+
+
+
+
+        echo $array[0][0]["value"];
+        echo $array[0][1]["value"];
+
+         echo $array[1][0]["value"];
+        echo $array[1][1]["value"];
+        
+
+     }
+
+
+
+
+
+
 
 
 	 /**

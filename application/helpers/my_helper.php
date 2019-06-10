@@ -35,6 +35,57 @@ if ( ! function_exists('my_pretty_date'))
 }
 
 
+
+/**
+  *  @Description: get username
+  *       @Params: none
+  *
+  *     @returns: username or string "Profile" if none set
+  */
+
+
+if ( ! function_exists('my_matrix'))
+{
+    function my_matrix($a)
+    {
+        $array = json_decode($a,true);
+
+        // echo "<pre>";
+        // print_r($array);
+        // echo "</pre>";
+
+      
+       //https://www.w3schools.com/php/showphp.asp?filename=demo_func_sizeof2
+       //https://stackoverflow.com/questions/32961591/php-multidimensional-array-length
+      
+
+
+        $matrixName = array();
+
+        for ($i=0; $i < sizeof($array) ; $i++) { 
+            for ($j=0; $j < count(reset($array)) ; $j++) { 
+
+                $x =  $array[$i][$j]["value"];
+                $y =  $array[$i][$j]["title"];
+
+                $z  = array($y => $x);
+                    
+                array_push($matrixName, $z);
+
+
+
+            }
+
+        }
+        return $matrixName;
+
+    }   
+}
+
+
+
+
+
 /**
   *  @Description: get username
   *       @Params: none

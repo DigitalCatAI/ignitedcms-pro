@@ -295,11 +295,27 @@ class Entries extends CI_Controller {
 		$query3 = $this->db->get();
 		
 		
+		/*=============================================
+ 			Attempt the pass json array into footer
+		===============================================*/
+
+		$this->db->select('yup');
+		$this->db->from('content');
+		$this->db->where('entryid', $entryid);
+
+		$query4 = $this->db->get();
 		
-
-
-
+		$tmp_s = "";
+		foreach ($query4->result() as $row) 
+		{
+			$tmp_s = $row->yup;
+		}
 		
+		$data['matrix'] = substr($tmp_s, 1, -1);
+
+		/*=============================================
+ 			end
+		===============================================*/
 		
 		
 		$data['query'] = $query;

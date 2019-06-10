@@ -55,8 +55,7 @@
           todos:
           [
 
-            // {title:'text'},
-            // {title:'textbox'}
+            <?php echo $matrix; ?>
 
           ],
           value: []

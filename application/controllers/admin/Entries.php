@@ -53,16 +53,24 @@ class Entries extends CI_Controller {
         echo "</pre>";
 
       
+       //https://www.w3schools.com/php/showphp.asp?filename=demo_func_sizeof2
        
+        for ($i=0; $i < sizeof($array) ; $i++) { 
+            for ($j=0; $j < sizeof($array,1) ; $j++) { 
+
+                echo $array[$i][$j]["value"];
+            }
+
+        }
 
 
 
 
-        echo $array[0][0]["value"];
-        echo $array[0][1]["value"];
+        // echo $array[0][0]["value"];
+        // echo $array[0][1]["value"];
 
-         echo $array[1][0]["value"];
-        echo $array[1][1]["value"];
+        //  echo $array[1][0]["value"];
+        // echo $array[1][1]["value"];
         
 
      }

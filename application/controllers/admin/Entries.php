@@ -58,7 +58,7 @@ class Entries extends CI_Controller {
       
 
 
-        $tmp_array = array();
+        $matrixName = array();
 
         for ($i=0; $i < sizeof($array) ; $i++) { 
             for ($j=0; $j < count(reset($array)) ; $j++) { 
@@ -68,7 +68,7 @@ class Entries extends CI_Controller {
 
                 $z  = array($y => $x);
                     
-                array_push($tmp_array, $z);
+                array_push($matrixName, $z);
 
 
 
@@ -78,12 +78,13 @@ class Entries extends CI_Controller {
 
 
         echo "<pre>";
-       // print_r($tmp_array);
+       // print_r($matrixName);
         echo "</pre>";
 
 
-        foreach ($tmp_array as $key => $value) {
+        foreach ($matrixName as $key => $value) {
            echo $value['mline'];
+           echo br(1);
         }
 
 

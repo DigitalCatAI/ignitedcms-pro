@@ -2,7 +2,34 @@
 
 class Stuff_entries extends CI_Model {
 
-	 
+	  /**
+	   *  @Description: get matrix content for entry id
+	   *       @Params: entryid
+	   *
+	   *  	 @returns: returns
+	   */
+	public function get_matrix($entryid)
+	{
+
+		$this->db->select('matrixName');
+		$this->db->from('content');
+		$this->db->where('entryid', $entryid);
+
+		$query4 = $this->db->get();
+		
+		$tmp_s = "";
+		foreach ($query4->result() as $row) 
+		{
+			$tmp_s = $row->matrixName;
+		}
+		
+		$matrix = substr($tmp_s, 1, -1);
+		return $matrix;
+
+
+	}
+
+
 
 
 	 /**

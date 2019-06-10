@@ -77,6 +77,19 @@
 ')); ?>
 </pre>   
 
+<br/><br/>
+<strong>Matrix</strong>
+<pre><?php echo trim(my_html_escape('
+<?php $x = my_matrix($matrixName); ?>
+
+<?php foreach ($x as $key => $value) :?>
+  
+  <?php echo $value["fieldHandle"] ?>
+
+<?php endforeach; ?>
+')); ?>
+</pre> 
+
 
                 <br/><br/>
                 <strong>Globals</strong> <br/>

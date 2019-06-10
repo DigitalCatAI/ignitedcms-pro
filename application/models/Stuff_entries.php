@@ -8,27 +8,80 @@ class Stuff_entries extends CI_Model {
 	   *
 	   *  	 @returns: returns
 	   */
-	public function get_matrix($entryid)
+	public function get_matrix($sectionid,$entryid)
 	{
 
-		$this->db->select('matrixName');
-		$this->db->from('content');
-		$this->db->where('entryid', $entryid);
 
-		$query4 = $this->db->get();
+		//get all the fields
+		$this->db->select('*');
+		$this->db->from('section_layout');
+		$this->db->where('sectionid', $sectionid);
+
+		$query = $this->db->get();
 		
-		$tmp_s = "";
-		foreach ($query4->result() as $row) 
+		foreach ($query->result() as $row) 
 		{
-			$tmp_s = $row->matrixName;
+			if( $this->is_matrix($row->fieldid))
+			{
+				$fieldname = my_field_name($row->fieldid);
+				$content = my_field_content($entryid,$fieldname);
+
+				//remove first and last characters [,]
+				$matrix = substr($content, 1, -1);
+
+
+			}
 		}
 		
-		$matrix = substr($tmp_s, 1, -1);
 		return $matrix;
+
+
+		// $this->db->select('*');
+		// $this->db->from('content');
+		// $this->db->where('entryid', $entryid);
+
+		// $query4 = $this->db->get();
+		
+		// $tmp_s = "";
+		// foreach ($query4->result() as $row) 
+		// {
+		// 	$tmp_s = $row->matrixNaxme;
+		// }
+		
+		// $matrix = substr($tmp_s, 1, -1);
+		// return $matrix;
 
 
 	}
 
+	 /**
+	  *  @Description: check if field id is matrix
+	  *       @Params: fieldid
+	  *
+	  *  	 @returns: true or false
+	  */
+
+	public function is_matrix($fieldid)
+	{
+
+		$this->db->select('type');
+		$this->db->from('fields');
+		$this->db->where('id', $fieldid);
+		$this->db->limit(1);
+
+		$query = $this->db->get();
+		
+		$pass = 0;
+		foreach ($query->result() as $row) 
+		{
+			if ($row->type == 'matrix') {
+				$pass = 1;
+			}
+		}
+		return $pass;
+
+
+	}
 
 
 

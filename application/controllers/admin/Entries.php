@@ -301,7 +301,7 @@ class Entries extends CI_Controller {
 
 
 		$this->load->model('Stuff_entries');
-		$data['matrix'] = $this->Stuff_entries->get_matrix($entryid);
+		$data['matrix'] = $this->Stuff_entries->get_matrix($sectionid,$entryid);
 
 		
 

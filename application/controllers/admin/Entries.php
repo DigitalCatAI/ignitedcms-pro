@@ -55,10 +55,15 @@ class Entries extends CI_Controller {
       
        //https://www.w3schools.com/php/showphp.asp?filename=demo_func_sizeof2
        
+        echo count($array,2);
+        echo br();
+
+
         for ($i=0; $i < sizeof($array) ; $i++) { 
-            for ($j=0; $j < sizeof($array,1) ; $j++) { 
+            for ($j=0; $j < sizeof($array,2) ; $j++) { 
 
                 echo $array[$i][$j]["value"];
+                echo br();
             }
 
         }

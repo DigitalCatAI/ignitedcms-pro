@@ -82,9 +82,11 @@
 <pre><?php echo trim(my_html_escape('
 <?php $x = my_matrix($matrixName); ?>
 
-<?php foreach ($x as $key => $value) :?>
-  
-  <?php echo $value["fieldHandle"] ?>
+
+<?php foreach ($x as $key => $value) : ?>
+
+   <?php echo the_field("fieldHandle",$value);  ?>
+
 
 <?php endforeach; ?>
 ')); ?>

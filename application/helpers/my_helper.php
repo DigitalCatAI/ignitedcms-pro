@@ -96,13 +96,11 @@ if ( ! function_exists('the_field'))
     {
         foreach ($var as $key => $value) 
         {
-           if ($value['title'] == $name) {
+           if ($value['title'] == $name) 
+           {
                echo $value['value'];
-           }
-
-           
-            
-      }
+           }     
+        }
 
     }   
 }

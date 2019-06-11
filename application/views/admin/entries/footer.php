@@ -43,6 +43,9 @@
 
   
 
+  <!-- quill -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
 
  <script type="text/javascript">
 
@@ -127,6 +130,14 @@
     }
    
     $(document).ready(function (event) {
+
+
+        var quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+
+
+        
 
       var gLob = "";
 

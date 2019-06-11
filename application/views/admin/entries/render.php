@@ -60,6 +60,14 @@
                         
                         <div class="col-sm-12">
 
+                            <div id="editor">
+                                <p>Hello World!</p>
+                                <p>Some initial <strong>bold</strong> text</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+
 
                         	<!-- existing assets -->
                         	<div class="existing-assets" id='hidden-upload' style="display:none;">

@@ -36,7 +36,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- end vuejs -->
 
-
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo (base_url()."resources")?>/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="<?php echo (base_url()."resources")?>/css/animate.css" type="text/css">

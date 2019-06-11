@@ -60,24 +60,49 @@ if ( ! function_exists('my_matrix'))
       
 
 
-        $matrixName = array();
+        // $matrixName = array();
 
-        for ($i=0; $i < sizeof($array) ; $i++) { 
-            for ($j=0; $j < count(reset($array)) ; $j++) { 
+        // for ($i=0; $i < sizeof($array) ; $i++) { 
+        //     for ($j=0; $j < count(reset($array)) ; $j++) { 
 
-                $x =  $array[$i][$j]["value"];
-                $y =  $array[$i][$j]["title"];
+        //         $x =  $array[$i][$j]["value"];
+        //         $y =  $array[$i][$j]["title"];
 
-                $z  = array($y => $x);
+        //         $z  = array($y => $x);
                     
-                array_push($matrixName, $z);
+        //         array_push($matrixName, $z);
 
 
 
-            }
+        //     }
 
-        }
-        return $matrixName;
+        // }
+        return $array;
+
+    }   
+}
+
+
+
+ /**
+  *  @Description: get the content
+  *       @Params: params
+  *
+  *       @returns: returns
+  */
+if ( ! function_exists('the_field'))
+{
+    function the_field($name,$var)
+    {
+        foreach ($var as $key => $value) 
+        {
+           if ($value['title'] == $name) {
+               echo $value['value'];
+           }
+
+           
+            
+      }
 
     }   
 }

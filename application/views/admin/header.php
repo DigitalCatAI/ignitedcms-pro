@@ -59,6 +59,12 @@
   <![endif]-->
     <style type="text/css">
 
+
+#editor-container {
+    height: 350px;
+    
+  }
+
   /*===================================
     Styles for matrix blocks
     ===================================*/

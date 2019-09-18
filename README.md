@@ -1,5 +1,8 @@
 ![alt text](https://github.com/ignitedcms/ignitedcms-pro/raw/master/img/ig.png "Logo Title Text 1")
 
+Tested on PHP version 5.6 - 7.0.8
+
+
 IgnitedCMS Pro is a content management system (CMS) that’s blends the power of codeigniter to create a dynamic content management system. The beauty is in its simplicity. Specifically targeted for developers and front end designers it allows the ultimate in customisation. 
 
 

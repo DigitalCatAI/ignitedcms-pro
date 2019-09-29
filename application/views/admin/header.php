@@ -36,6 +36,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- end vuejs -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
+
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo (base_url()."resources")?>/css/bootstrap.css" type="text/css">

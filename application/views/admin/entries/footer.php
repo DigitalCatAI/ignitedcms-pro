@@ -61,7 +61,8 @@
             <?php echo $matrix; ?>
 
           ],
-          value: []
+          value: [],
+          
       },
       methods:
       {
@@ -94,7 +95,28 @@
         {
             this.todos.splice(this.todos.indexOf(todo),1)
         },
-      }
+      },
+      mounted: function(){
+        var self = this;
+        self.$nextTick(function(){
+          var sortable = Sortable.create(document.getElementById('items'), {
+            onEnd: function(e) {
+              var clonedItems = self.todos.filter(function(item){
+               return item;
+              });
+              clonedItems.splice(e.newIndex, 0, clonedItems.splice(e.oldIndex, 1)[0]);
+              self.todos = [];
+              self.$nextTick(function(){
+                self.todos = clonedItems;
+              });
+            }
+          }); 
+        });
+      },
+
+
+
+
   });
 
 

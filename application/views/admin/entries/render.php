@@ -268,7 +268,16 @@
 		        		<!-- end -->
 		        		<div id="app">
 
-                            <!-- <input type="text" name="matrixName" id="" v-model="JSON.stringify(todos)" /> -->
+                          <div id="box">
+
+  <!-- <div id="items">
+    <template v-for="item in items" >
+      <div class="itemc">{{ item.title }}</div>
+    </template>
+  </div>
+  <div><button v-on:click.stop.prevent="addItem">Add item</button></div>
+  <pre>{{ items }}</pre>
+</div> -->
 
 		        		{{todos}}
 
@@ -277,7 +286,7 @@
                         
                        
 		        		<br/>
-
+		        		<div id="items">
 		        		 <div class="m-list" v-for="todo in todos">
 		        		 	<div class="m-del" @click="deleteItem(todo)"><i class="fa fa-trash-o"></i></div>
 		        		 	<div v-for="x in todo.length">
@@ -317,6 +326,7 @@
 			                  </div>
 			                  
             			 </div>
+            			</div>
 
 
 			        	<?php foreach ($query->result() as $row): ?>

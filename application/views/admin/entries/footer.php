@@ -131,14 +131,14 @@
    
     $(document).ready(function (event) {
 
-var quill = new Quill('#editor-container', {
-    modules: {
+// var quill = new Quill('#editor-container', {
+//     modules: {
       
-      toolbar: '#toolbar-container'
-    },
-    placeholder: 'Compose an epic...',
-    theme: 'snow'
-  });
+//       toolbar: '#toolbar-container'
+//     },
+//     placeholder: 'Compose an epic...',
+//     theme: 'snow'
+//   });
 
 
 

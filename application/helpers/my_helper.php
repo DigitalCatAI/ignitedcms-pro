@@ -1,5 +1,54 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+ 
+ /**
+  *  @Description: Matrix get value
+  *       @Params: 'name',json array
+  *
+  *     @returns: returns
+  */
+
+ //------------------------------
+ //  Usage
+ // 
+ //  $json = json_decode($matrix);
+ //     foreach ($json as $key) {
+ //     get_value('there',$key);
+ //  } 
+ //
+ //
+ //-------------------------------
+ 
+     
+ 
+ 
+
+ if ( ! function_exists('get_value'))
+{
+    function get_value($name, $array)
+    {
+        
+        foreach ($array as $key) 
+        {
+          
+          if($key->title == $name)
+          {
+            echo $key->value;
+          }
+
+          
+          // echo br();
+          // echo $key->title;
+        }
+
+    }   
+}
+
+
+
+
+
+
  /**
   *  @Description: A better html entities handles £ sign
   *       @Params: $var

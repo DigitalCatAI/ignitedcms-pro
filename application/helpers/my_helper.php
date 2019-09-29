@@ -36,9 +36,6 @@
             echo $key->value;
           }
 
-          
-          // echo br();
-          // echo $key->title;
         }
 
     }   

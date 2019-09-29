@@ -20,28 +20,41 @@
  //-------------------------------
  
      
- 
- 
-
- if ( ! function_exists('get_value'))
+if ( ! function_exists('get_value'))
 {
     function get_value($name, $array)
     {
-        
         foreach ($array as $key) 
         {
-          
-          if($key->title == $name)
-          {
-            echo $key->value;
-          }
-
+            if($key->title == $name)
+            {
+              echo $key->value;
+            }
         }
-
     }   
 }
 
 
+ /**
+  *  @Description: Get the matrix type
+  *       @Params: 'Matrix name',  'array'
+  *
+  *     @returns: returns
+  */
+
+if ( ! function_exists('get_type'))
+{
+    function get_type($name,  $array)
+    {
+        foreach ($array as $key) 
+        {
+            if($key->title == $name)
+            {
+              return $key->type;
+            }
+        }
+    }   
+}
 
 
 

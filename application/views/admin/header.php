@@ -102,6 +102,7 @@
     color: #fff;
     border-radius: 20px;
     background-color: #333;
+    margin-bottom: 20px;
     
 }
 

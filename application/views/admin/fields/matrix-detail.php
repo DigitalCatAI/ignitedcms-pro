@@ -199,7 +199,7 @@ You can NOT use the following names: [url,content,id,section,field]</div>
 
 
                             
-                            <a href="#" @click="someFunc"> + Add another</a> 
+                            <a href="#" @click="someFunc"> + Add </a> 
 
 
                     </div>

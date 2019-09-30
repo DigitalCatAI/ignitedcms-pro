@@ -28,7 +28,7 @@ if ( ! function_exists('get_value'))
         {
             if($key->title == $name)
             {
-              echo $key->value;
+              return $key->value;
             }
         }
     }   

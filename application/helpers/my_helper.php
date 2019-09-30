@@ -1,6 +1,43 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
- 
+ /**
+   *  @Description: Check if the matrix field is empty
+   *       @Params: Matrix name, array key
+   *
+   *     @returns: True or false
+   */ 
+
+
+
+if ( ! function_exists('is_empty'))
+{
+    function is_empty($name, $array)
+    {
+        foreach ($array as $key) 
+        {
+            if($key->title == $name)
+            {
+               if (strlen($key->value) > 0) 
+               {
+                  return false;
+               } 
+               else 
+               {
+                  return true;
+               }
+            }
+        }
+    }   
+}
+
+
+
+
+
+
+
+
+
  /**
   *  @Description: Matrix get value
   *       @Params: 'name',json array

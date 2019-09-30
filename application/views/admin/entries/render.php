@@ -318,9 +318,25 @@
 			                        </select>
 			                    </div>
 
+
+			                    <!-- <div class="checkbox">
+                                    <label class="checkbox-custom">
+                                         <input type="checkbox" v-model="x.value"> <i class="fa fa-square-o"></i> {{x.title}} 
+                                     </label>
+                                </div> -->
+
+
+
+
 			                    <div v-if="todo[x-1].type=='check-box'">
 			                    	<div v-for="y in todo[x-1].variations.length">
-			                        <input  type="radio" name="" :value="todo[x-1].variations[y-1]" /> {{todo[x-1].variations[y-1]}} 
+
+			                    		<div class="checkbox">
+		                                    <label class="checkbox-custom">
+		                                         <input type="checkbox" v-model="todo[x-1].variations[y-1]"> <i class="fa fa-square-o"></i> {{todo[x-1].variations[y-1]}} 
+		                                     </label>
+                                		</div>
+			                        
 			                    	</div>
 			                    </div>
 			                  </div>
